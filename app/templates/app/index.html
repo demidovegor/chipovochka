@@ -1,0 +1,46 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="left">
+<p>
+Выберите марку вашего авто</p>
+<table class="table_bn">
+<tbody>
+<tr>{% for a in car_brands %}
+<td class="td_bn">	<a href="/car_models/{{ a.BrandName}}">{{ a.BrandName}}</a></td>
+{% endfor %}
+</tr>
+</tbody>
+</table>
+
+<br>
+SOME TEXT
+</div>
+
+<div>
+	
+Request Method:	GET
+Request URL:	http://127.0.0.1:8000/
+Django Version:	1.11.2
+Exception Type:	TemplateSyntaxError
+Exception Value:	
+'block' tag with name 'content' appears more than once
+Exception Location:	C:\Users\Egor\documents\visual studio 2017\Projects\CHIP\CHIP\env\lib\site-packages\django\template\loader_tags.py in do_block, line 251
+Python Executable:	C:\Users\Egor\documents\visual studio 2017\Projects\CHIP\CHIP\env\Scripts\python.exe
+Python Version:	3.6.0
+Python Path:	
+['C:\\Users\\Egor\\documents\\visual studio 2017\\Projects\\CHIP\\CHIP',
+ 'C:\\Users\\Egor\\documents\\visual studio 2017\\Projects\\CHIP\\CHIP',
+ 'C:\\Users\\Egor\\documents\\visual studio '
+ '2017\\Projects\\CHIP\\CHIP\\env\\Scripts\\python36.zip',
+ 'C:\\Program Files\\Python36\\DLLs',
+ 'C:\\Program Files\\Python36\\lib',
+ 'C:\\Program Files\\Python36',
+ 'C:\\Users\\Egor\\documents\\visual studio 2017\\Projects\\CHIP\\CHIP\\env',
+ 'C:\\Users\\Egor\\documents\\visual studio '
+ '2017\\Projects\\CHIP\\CHIP\\env\\lib\\site-packages']
+Server time:	Mon, 12 Jun 2017 01:13:43 +0000
+</div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="left">
+<p>
+Выберите марку вашего авто</p>
+<table class="table_bn">
+<tbody>
+<tr>{% for a in car_brands %}
+<td class="td_bn">{{ a.BrandName}}</td>
+{% endfor %}
+</tr>
+</tbody>
+</table>
+
+<br>
+SOME TEXT
+</div>
+
+<div>
+
+{{car_models.BrandName}} <br />
+{{car_models.ModelName}}<br />
+{{car_models.info_v}}<br />
+{{car_models.info_type_ebu}}<br />
+{{car_models.info_price}}<br />
+</div>
+
+{% endblock %}

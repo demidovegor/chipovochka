@@ -1,0 +1,18 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<table>
+<tbody>
+<tr>{% for a in car_brands %}
+<td>{{ a.BrandName}}</td>
+{% endfor %}
+</tr>
+</tbody>
+</table>
+{% endblock %}

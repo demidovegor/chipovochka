@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@charset "utf-8";
+/* CSS Document */
+BODY
+{
+	margin: 0;
+	background: #eeeeee; /* Old browsers */
+	background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #eeeeee 0%,#eeeeee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', ndColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+}
+
+div.header
+{
+	background-color: black;
+	vertical-align: baseline;
+	color: white;
+	font-size: 6vh;
+	padding: 1vh;
+	height: 7vh;
+	top: 0;
+    left: 0;
+}
+
+.buttons
+{
+	float: right;
+	font-size: 2vh;
+}
+
+div#logo
+{
+	
+}
+
+.logo1
+{
+	height: 8vh;
+	float: left;
+	vertical-align: baseline;
+}
+
+.logo2
+{
+	height: 4vh;
+	padding-left: 1vw;
+	vertical-align: baseline;
+}
+
+div.left
+{
+	float: left;
+	width: 20vw;
+	background-color: red;
+	margin-bottom: 100px;
+	height: 5000px;
+}
+.footer 
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: black;
+	color: white;
+	
+}
+.table_bn {
+	margin-left: 20px;
+	margin-top: 20px;
+   }
+.td_bn, .tn_bn {
+    padding: 5px; /* Поля вокруг текста */
+    border: 5px solid black; /* Рамка вокруг ячеек */
+	display: block;
+   }
+
+.brandnames
+{
+	border : 5px;
+	border-color: black;
+}
+</style>
+<title>{{ title }}</title>
+{% load staticfiles %}
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="header">
+	<a href="#"><div id="logo"></div>
+	<img src="{% static 'app/content/LOGO-PIC.png' %}" class="logo1">
+	<img src="{% static 'app/content/text-logo.png' %}" class="logo2">
+	</a>
+	 <div class="buttons">
+	 <a href="{% url 'home' %}">Home</a>
+     <a href="{% url 'about' %}">About</a>
+     <a href="{% url 'contact' %}">Contact</a> </div>
+</div>
+{% block content %}{% endblock %}
+<!--
+<div class="left">
+{% include 'app/loginpartial.html' %}
+SOME TEXT
+<br>
+SOME TERXCD	
+</div>
+
+<div>
+	-------here-----
+</div>
+-->
+<div class="footer">
+	&copy; {{ year }} - My Django Application
+</div>
+
+
+{% block scripts %}{% endblock %}
+</body>
+</html>
